@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5380383F-B7AE-4536-9C5C-C431CBADFD63}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GCMS</RootNamespace>
+    <AssemblyName>GCMS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=8.2.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.8.2.1\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.1.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.8.1.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.76, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Debts\frmDebts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debts\frmDebts.Designer.cs">
+      <DependentUpon>frmDebts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debts\frmPayDebt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debts\frmPayDebt.Designer.cs">
+      <DependentUpon>frmPayDebt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device_Rentals\frmRentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device_Rentals\frmRentScreen.Designer.cs">
+      <DependentUpon>frmRentScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device_Rentals\frmReturnScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device_Rentals\frmReturnScreen.Designer.cs">
+      <DependentUpon>frmReturnScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Management\frmGamesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game_Management\frmGamesManagement.Designer.cs">
+      <DependentUpon>frmGamesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLoginScreen.Designer.cs">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\frmPaymentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment\frmPaymentScreen.Designer.cs">
+      <DependentUpon>frmPaymentScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddNewPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddNewPerson.Designer.cs">
+      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmSelectPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmSelectPerson.Designer.cs">
+      <DependentUpon>frmSelectPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renters\frmAddNewRenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renters\frmAddNewRenter.Designer.cs">
+      <DependentUpon>frmAddNewRenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renters\frmRenters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renters\frmRenters.Designer.cs">
+      <DependentUpon>frmRenters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renters\frmSelectRenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renters\frmSelectRenter.Designer.cs">
+      <DependentUpon>frmSelectRenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\clsExcelExporter.cs" />
+    <Compile Include="Reports\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\frmCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\frmCart.Designer.cs">
+      <DependentUpon>frmCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\frmStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\frmStore.Designer.cs">
+      <DependentUpon>frmStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\frmStoreManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\frmStoreManagement.Designer.cs">
+      <DependentUpon>frmStoreManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\frmStorePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\frmStorePayment.Designer.cs">
+      <DependentUpon>frmStorePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\frmUpdateStoreItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\frmUpdateStoreItem.Designer.cs">
+      <DependentUpon>frmUpdateStoreItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmActivate_Deactivate_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmActivate_Deactivate_Users.Designer.cs">
+      <DependentUpon>frmActivate_Deactivate_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddNewUser.Designer.cs">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUpdateLoginInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUpdateLoginInfo.Designer.cs">
+      <DependentUpon>frmUpdateLoginInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUsersManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUsersManagement.Designer.cs">
+      <DependentUpon>frmUsersManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlCategoryItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlCategoryItem.Designer.cs">
+      <DependentUpon>ctrlCategoryItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlDeviceRental.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlDeviceRental.Designer.cs">
+      <DependentUpon>ctrlDeviceRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlFoosballTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlFoosballTable.Designer.cs">
+      <DependentUpon>ctrlFoosballTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlGameManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlGameManagement.Designer.cs">
+      <DependentUpon>ctrlGameManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlGategoriesList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlGategoriesList.Designer.cs">
+      <DependentUpon>ctrlGategoriesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlNoData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlNoData.Designer.cs">
+      <DependentUpon>ctrlNoData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlPlaystation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlPlaystation.Designer.cs">
+      <DependentUpon>ctrlPlaystation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlChessTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlChessTable.Designer.cs">
+      <DependentUpon>ctrlChessTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlStoreItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlStoreItem.Designer.cs">
+      <DependentUpon>ctrlStoreItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlTennisTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlTennisTable.Designer.cs">
+      <DependentUpon>ctrlTennisTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlPools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlPools.Designer.cs">
+      <DependentUpon>ctrlPools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Debts\frmDebts.resx">
+      <DependentUpon>frmDebts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debts\frmPayDebt.resx">
+      <DependentUpon>frmPayDebt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device_Rentals\frmRentScreen.resx">
+      <DependentUpon>frmRentScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device_Rentals\frmReturnScreen.resx">
+      <DependentUpon>frmReturnScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game_Management\frmGamesManagement.resx">
+      <DependentUpon>frmGamesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLoginScreen.resx">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment\frmPaymentScreen.resx">
+      <DependentUpon>frmPaymentScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddNewPerson.resx">
+      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmSelectPerson.resx">
+      <DependentUpon>frmSelectPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Renters\frmAddNewRenter.resx">
+      <DependentUpon>frmAddNewRenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Renters\frmRenters.resx">
+      <DependentUpon>frmRenters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Renters\frmSelectRenter.resx">
+      <DependentUpon>frmSelectRenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\frmCart.resx">
+      <DependentUpon>frmCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\frmStore.resx">
+      <DependentUpon>frmStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\frmStoreManagement.resx">
+      <DependentUpon>frmStoreManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\frmStorePayment.resx">
+      <DependentUpon>frmStorePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\frmUpdateStoreItem.resx">
+      <DependentUpon>frmUpdateStoreItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmActivate_Deactivate_Users.resx">
+      <DependentUpon>frmActivate_Deactivate_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddNewUser.resx">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUpdateLoginInfo.resx">
+      <DependentUpon>frmUpdateLoginInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUsersManagement.resx">
+      <DependentUpon>frmUsersManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlCategoryItem.resx">
+      <DependentUpon>ctrlCategoryItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlDeviceRental.resx">
+      <DependentUpon>ctrlDeviceRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlFoosballTable.resx">
+      <DependentUpon>ctrlFoosballTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlGameManagement.resx">
+      <DependentUpon>ctrlGameManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlGategoriesList.resx">
+      <DependentUpon>ctrlGategoriesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlNoData.resx">
+      <DependentUpon>ctrlNoData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlPlaystation.resx">
+      <DependentUpon>ctrlPlaystation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlChessTable.resx">
+      <DependentUpon>ctrlChessTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlStoreItem.resx">
+      <DependentUpon>ctrlStoreItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlTennisTable.resx">
+      <DependentUpon>ctrlTennisTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlPools.resx">
+      <DependentUpon>ctrlPools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GCMS_Business\GCMS_Business.csproj">
+      <Project>{0e85b9f9-56cb-45f1-9d72-34d5b0ad68c1}</Project>
+      <Name>GCMS_Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCMS_Infrastructure\GCMS_Infrastructure.csproj">
+      <Project>{c60b49ad-adfd-4fce-acd6-1ff522943106}</Project>
+      <Name>GCMS_Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rentals_img_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debts_img_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store_img_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-management-img-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-setting-img-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-img-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pool-img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_img_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PesonAdd_img_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_img_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FoosballTable_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TennisTable_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Playstation_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChessTable_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_white_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-management_img_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_img_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activate_Deactivate_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeviceRental_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeviceRental_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rent_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StoreItme_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_Gear_img_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notfound_img-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store_img_680.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting-gear_img_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-img-48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

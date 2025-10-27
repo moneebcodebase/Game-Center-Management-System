@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5380383f-b7ae-4536-9c5c-c431cbadfd63": {
+      "ProjectGuid": "5380383f-b7ae-4536-9c5c-c431cbadfd63",
+      "DisplayName": "GCMS",
+      "ColorIndex": 0
+    },
+    "0e85b9f9-56cb-45f1-9d72-34d5b0ad68c1": {
+      "ProjectGuid": "0e85b9f9-56cb-45f1-9d72-34d5b0ad68c1",
+      "DisplayName": "GCMS_Business",
+      "ColorIndex": 1
+    },
+    "9a237f2d-bca4-4aba-9989-c09d22d8902b": {
+      "ProjectGuid": "9a237f2d-bca4-4aba-9989-c09d22d8902b",
+      "DisplayName": "GCMS_Data_Access",
+      "ColorIndex": 2
+    },
+    "c60b49ad-adfd-4fce-acd6-1ff522943106": {
+      "ProjectGuid": "c60b49ad-adfd-4fce-acd6-1ff522943106",
+      "DisplayName": "GCMS_Infrastructure",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}
