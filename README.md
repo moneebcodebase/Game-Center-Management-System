@@ -58,6 +58,15 @@ It provides a **complete end-to-end solution** for daily operations, billing, an
 
 **Multi-layered architecture:**
 Presentation Layer → Business Layer → Data Access Layer , Infrastructure Layer
+```
+/
+├── GCMS/                        # Presentation Layer (WinForms UI)
+├── GCMS_Business/               # Business Logic Layer
+├── GCMS_DataAccess/             # Data Access Layer 
+├── GCMS_Infrastructure/         # Support  Other Layers
+├── Database/                    # Contains The Database Script
+├── README.md                    # Project documentation
+```
 
 
 
@@ -111,3 +120,15 @@ Edit your `App.config` connection string:
 - Reusable components (User Controls)
 - User roles with access validation (Supervisor, Admin, User)  
 - Interactive reports and dashboards
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+
+## 👤 Author
+📧 moneebcodebase@gmail.com
+🌐 www.linkedin.com/in/moneeb-al-zakoot
+💻 github.com/moneebcodebase
+moneebcodebase
+Feel free to reach out or contribute via GitHub.
