@@ -7,9 +7,27 @@
 ![License MIT](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
 ![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red?style=flat-square)
 
-A full-featured C# .NET Framework application to **manage and automate game center operations**, including game rentals, in-store products, customer management, and administrative control — all backed by **SQL Server**.
+
+GCMS is a powerful C# .NET Framework application designed to streamline and automate the operations of a game center. It handles everything from in-store and take-home game rentals, inventory and product sales, to customer management and administrative controls. Built on a robust SQL Server backend, GCMS ensures secure, efficient, and real-time management of all game center activities.
 
 ---
+
+## 📸 Screenshots
+
+Here are some snapshots of GCMS in action:
+
+- **Dashboard:**  
+  ![Dashboard](assets/dashboard.png)
+
+- **Store:**  
+  ![Rentals](assets/Store.png)
+
+- **Store Management:**  
+  ![Store](assets/Store_Management.png)
+
+- **Reports:**  
+  ![Reports](assets/Reports.png)
+
 
 ## 🧭 Overview
 
@@ -84,7 +102,7 @@ Presentation Layer → Business Layer → Data Access Layer , Infrastructure Lay
 ---
 
 ## 🗄️ Database Setup
-
+   (you can view the database diagram after setting up the database)
 1. Open **SQL Server Management Studio (SSMS)**  
 2. Run the script:  
 3. Creates all tables, relationships, constraints, and default admin user:
@@ -120,6 +138,20 @@ Edit your `App.config` connection string:
 - Reusable components (User Controls)
 - User roles with access validation (Supervisor, Admin, User)  
 - Interactive reports and dashboards
+
+
+## 📈 Future Enhancements
+- Web & Mobile Front-End
+      Extend GCMS beyond Windows Forms with a web or mobile interface for remote access and real-time updates.
+- Cloud-Based Database Support
+      Enable cloud hosting for scalability, multi-center synchronization, and backup automation.
+- Enhanced Reporting
+      Customizable reports, automated scheduling, and export to multiple formats (PDF, Excel, CSV).
+- Integration with Payment Gateways
+      Support online payments for in-store rentals and products to modernize transactions.
+- Notification System
+      Alerts for overdue rentals, low stock, or upcoming events to streamline management.
+
 
 ## 📄 License
 
