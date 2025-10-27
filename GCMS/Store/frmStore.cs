@@ -257,7 +257,7 @@ namespace GCMS.Store
                              // storee management
         private void btnStoreManagement_Click(object sender, EventArgs e)
         {
-            if (clsUserSession.CurrentUser.Username == "Supervisor" || clsUserSession.CurrentUser.Username == "Admin")
+            if (clsUserSession.CurrentUser.Role == "Supervisor" || clsUserSession.CurrentUser.Role == "Admin")
             {
                 frmStoreManagement frm = new frmStoreManagement();
                 frm.FormClosing += Frm_StoreManagementFormClosing; //Subscribe to the form closing event to refresh the store items 

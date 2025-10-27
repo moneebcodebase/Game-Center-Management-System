@@ -147,7 +147,7 @@ namespace GCMS.Login
 
             
             //Log the login info
-           // clsUsers.LogLoginInfo(clsUserSession.CurrentUser);
+            clsUsers.LogLoginInfo(clsUserSession.CurrentUser);
 
             //If remeber me check box is check then save the login credentials into the windows credential , else save empty login credentials
             if (chkRememberMe.Checked)

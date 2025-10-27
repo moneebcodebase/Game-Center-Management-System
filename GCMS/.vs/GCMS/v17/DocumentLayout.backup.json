@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\C# Projects\\GCMS Project\\GCMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5380383F-B7AE-4536-9C5C-C431CBADFD63}|GCMS.csproj|d:\\c# projects\\gcms project\\gcms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380383F-B7AE-4536-9C5C-C431CBADFD63}|GCMS.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380383F-B7AE-4536-9C5C-C431CBADFD63}|GCMS.csproj|d:\\c# projects\\gcms project\\gcms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5380383F-B7AE-4536-9C5C-C431CBADFD63}|GCMS.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5380383F-B7AE-4536-9C5C-C431CBADFD63}|GCMS.csproj|d:\\c# projects\\gcms project\\gcms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5380383F-B7AE-4536-9C5C-C431CBADFD63}|GCMS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,6 +31,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\C# Projects\\GCMS Project\\GCMS\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "D:\\C# Projects\\GCMS Project\\GCMS\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T20:15:44.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "D:\\C# Projects\\GCMS Project\\GCMS\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "D:\\C# Projects\\GCMS Project\\GCMS\\frmMain.cs [Design]",
+              "RelativeToolTip": "frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T20:15:43.001Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C# Projects\\GCMS Project\\GCMS\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

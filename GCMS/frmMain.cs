@@ -393,7 +393,7 @@ namespace GCMS
         private void btnUsersManagement_Click(object sender, EventArgs e)
         {
            
-            if (clsUserSession.CurrentUser.Username == "Supervisor")
+            if (clsUserSession.CurrentUser.Role == "Supervisor")
             {
                 frmUsersManagement frm = new frmUsersManagement();
                 frm.ShowDialog();
@@ -407,7 +407,7 @@ namespace GCMS
 
         private void btnGamesManagement_Click(object sender, EventArgs e)
         {
-            if (clsUserSession.CurrentUser.Username == "Supervisor" || clsUserSession.CurrentUser.Username == "Admin")
+            if (clsUserSession.CurrentUser.Role == "Supervisor" || clsUserSession.CurrentUser.Role == "Admin")
             {
                 frmGamesManagement frm = new frmGamesManagement();
                 frm.ShowDialog();
@@ -433,7 +433,7 @@ namespace GCMS
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-            if (clsUserSession.CurrentUser.Username == "Supervisor" || clsUserSession.CurrentUser.Username == "Admin")
+            if (clsUserSession.CurrentUser.Role == "Supervisor" || clsUserSession.CurrentUser.Role == "Admin")
             {
                 frmReports frm = new frmReports();
                 frm.ShowDialog();
