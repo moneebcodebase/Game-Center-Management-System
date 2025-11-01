@@ -161,6 +161,6 @@ This project is licensed under the MIT License.
 ## 👤 Author
 📧 moneebcodebase@gmail.com
 🌐 www.linkedin.com/in/moneeb-al-zakoot
-💻 github.com/moneebcodebase
-moneebcodebase
+💻 https://github.com/moneebcodebase
+
 Feel free to reach out or contribute via GitHub.
